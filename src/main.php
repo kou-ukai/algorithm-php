@@ -1,15 +1,20 @@
 <?php
 print("<pre>");
-require_once("sort/bubbleSort.php");
-
-$bubbleSort = new BubbleSort();
+require_once("sort/BubbleSort.php");
+require_once("sort/SelectionSort.php");
 
 $before = createArray();
 
 print("before---------");
 print_r($before);
 
-$after = $bubbleSort->sort($before);
+// バブルソート
+//$bubbleSort = new BubbleSort();
+//$after = $bubbleSort->sort($before);
+
+// 選択ソート
+$selectionSort = new SelectionSort();
+$after = $selectionSort->sort($before);
 
 print("after---------");
 print_r($after);
