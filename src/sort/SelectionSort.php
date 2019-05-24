@@ -17,32 +17,24 @@ class SelectionSort {
     
     for($j = 0; $j < $loopCount; $j++){
       
-      // 検索範囲内で最小のキーの配列が最小の値を持つと仮定する
-      $min = $ary[$j];
+      // 検索範囲内で最小の値を持つ配列の番号について初期値を設定する
+      $min = $j;
       
       for($k = $j + 1; $k < $count; $k++){
         
         // 現在$minに入っている値と比較対象の配列とで比較対象の方が小さければ$minの値を更新する
-        if($min > $ary[$k]){
-          $min = $ary[$k];
+        if($ary[$min] > $ary[$k]){
+          $min = $k;
         }
 
       }
-
-      echo array_search($min, $ary).".".$min."-".$j.".".$ary[$j];
-      print("<br>");
-      
-      // 検索範囲内で抽出した最小値の配列の位置を取得
-      $minNo = array_search($min, array_slice($ary, $j)) + $j;
       
       // 検索した最小値が検索範囲内で最小の位置にないのであれば位置を交換する
-      if($min < $ary[$j]){
-        $ary[$minNo] = $ary[$j];
-        $ary[$j] = $min;
+      if($ary[$min] < $ary[$j]){
+        $temp = $ary[$min];
+        $ary[$min] = $ary[$j];
+        $ary[$j] = $temp;
       }
-
-      print_r($ary);
-      print("<br>");
 
     }
 
