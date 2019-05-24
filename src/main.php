@@ -2,10 +2,11 @@
 print("<pre>");
 require_once("sort/BubbleSort.php");
 require_once("sort/SelectionSort.php");
+require_once("sort/InsertionSort.php");
 
 $before = createArray();
 
-print("before---------");
+print("before---------\n");
 print_r($before);
 
 // バブルソート
@@ -13,10 +14,14 @@ print_r($before);
 //$after = $bubbleSort->sort($before);
 
 // 選択ソート
-$selectionSort = new SelectionSort();
-$after = $selectionSort->sort($before);
+// $selectionSort = new SelectionSort();
+// $after = $selectionSort->sort($before);
 
-print("after---------");
+// 挿入ソート
+$insertionSort = new InsertionSort();
+$after = $insertionSort->sort($before);
+
+print("after---------\n");
 print_r($after);
 
 /**
