@@ -18,11 +18,11 @@ class SelectionSort {
       // 最小値の位置を初期化
       $minIndex = $swapIndex;
 
-      // 比較対象の要素を指定
+      // 最小値の位置を検索
       for($testIndex = $swapIndex; $testIndex < $max; $testIndex++){
 
         if($ary[$testIndex] < $ary[$minIndex]){
-          // 比較対象が最小値より小さい場合、最小値の位置を現在位置で更新
+          // 比較対象が最小値より小さい場合、最小値の位置を更新
           $minIndex = $testIndex;
 
         }
