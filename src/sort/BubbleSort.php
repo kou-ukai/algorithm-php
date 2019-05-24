@@ -19,20 +19,20 @@ class BubbleSort {
     for($j = 0; $j < $count; $j++){
 
       // 配列の比較、入れ替え用の変数
-      $x = 0;
-      $y = $x + 1;
+      $x = $count;
+      $y = $x - 1;
 
       for($k = 0; $k < $loopCount; $k++){
         
         // 隣り合った配列を比較、順番が逆であれば交換する
-        if($ary[$x] > $ary[$y]){
+        if($ary[$x] < $ary[$y]){
           $temp = $ary[$x];
           $ary[$x] = $ary[$y];
           $ary[$y] = $temp;
         }
 
-        $x++;
-        $y++;
+        $x--;
+        $y--;
 
       }
 
