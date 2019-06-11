@@ -3,6 +3,7 @@ print("<pre>");
 require_once("sort/BubbleSort.php");
 require_once("sort/SelectionSort.php");
 require_once("sort/InsertionSort.php");
+require_once("search/BinaryTree.php");
 
 $before = createArray();
 
@@ -23,6 +24,14 @@ $after = $insertionSort->sort($before);
 
 print("after---------\n");
 print_r($after);
+
+$binaryTree = new BinaryTree();
+$index = $binaryTree->search($after, $after[9]);
+
+print("探索結果--------\n");
+print("\n");
+print($after[9] . " は " . $index . " 番目\n");
+print("\n");
 
 /**
  * 0～99までの値を格納した長さ10の配列を生成する
