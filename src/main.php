@@ -15,22 +15,22 @@ print_r($before);
 //$after = $bubbleSort->sort($before);
 
 // 選択ソート
-// $selectionSort = new SelectionSort();
-// $after = $selectionSort->sort($before);
+$selectionSort = new SelectionSort();
+$after = $selectionSort->sort($before);
 
 // 挿入ソート
-$insertionSort = new InsertionSort();
-$after = $insertionSort->sort($before);
+// $insertionSort = new InsertionSort();
+// $after = $insertionSort->sort($before);
 
 print("after---------\n");
 print_r($after);
 
 $binaryTree = new BinaryTree();
-$index = $binaryTree->search($after, $after[9]);
+$index = $binaryTree->search($after, $after[3]);
 
 print("探索結果--------\n");
 print("\n");
-print($after[9] . " は " . $index . " 番目\n");
+print($after[3] . " は " . $index . " 番目\n");
 print("\n");
 
 /**
